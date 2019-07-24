@@ -1,5 +1,4 @@
-const library = ['pro', 'gram', 'merit', 'program', 'it', 'programmer']
-
+let library = ['pro', 'gram', 'merit', 'program', 'it', 'programmer']
 let input = 'programmerit'
 let change = input
 let getChart = 0
@@ -21,9 +20,8 @@ for (let l = 0; l < whitelist.length; l++) {
     for (let i = 0; i < whitelist.length; i++) {
         temporary = jung + whitelist[i]
         getChart = change.search(temporary)
-
         if (jung.search(validation) >= 0) {
-            if (i == 0) {
+            if (i == 0 && change.search(jung) >= 0) {
                 output += '\n' + jung
             }
             if (getChart >= 0) {
@@ -35,4 +33,3 @@ for (let l = 0; l < whitelist.length; l++) {
     jung = ''
 }
 console.log(output)
-
