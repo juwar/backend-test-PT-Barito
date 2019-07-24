@@ -5,7 +5,7 @@ let getChart = 0
 let whitelist = []
 let output = ''
 let temporary = ''
-let jung = ''
+let junk = ''
 let validation = input.slice(0, 2)
 
 for (let i = 0; i < library.length; i++) {
@@ -16,20 +16,20 @@ for (let i = 0; i < library.length; i++) {
 }
 
 for (let l = 0; l < whitelist.length; l++) {
-    jung = library[l]
+    junk = library[l]
     for (let i = 0; i < whitelist.length; i++) {
-        temporary = jung + whitelist[i]
+        temporary = junk + whitelist[i]
         getChart = change.search(temporary)
-        if (jung.search(validation) >= 0) {
-            if (i == 0 && change.search(jung) >= 0) {
-                output += '\n' + jung
+        if (junk.search(validation) >= 0) {
+            if (i == 0 && change.search(junk) >= 0) {
+                output += '\n' + junk
             }
             if (getChart >= 0) {
-                jung += whitelist[i]
+                junk += whitelist[i]
                 output += ' ' + whitelist[i]
             }
         }
     }
-    jung = ''
+    junk = ''
 }
 console.log(output)
